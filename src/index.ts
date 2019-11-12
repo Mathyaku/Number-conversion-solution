@@ -45,8 +45,11 @@ export function convertNumberToEnglishText(n: number): string {
 
     const keyNumbers: number[] = Object.keys(dictionary).map(number => Number(number)).reverse();
 
-    keyNumbers.forEach(keyNumber => {
-        if(processingNumber >= keyNumber) {
+    for(const keyNumber of keyNumbers) {
+        if(processingNumber === 0){
+            break;
+        }
+        else if(processingNumber >= keyNumber) {
 
             //split point to separate hundred and thousand
             if(keyNumber >= 100) {
@@ -67,7 +70,7 @@ export function convertNumberToEnglishText(n: number): string {
                 processingNumber -= keyNumber;
             }
         }
-    });
+    }
 
     return englishText.trim();
 }
