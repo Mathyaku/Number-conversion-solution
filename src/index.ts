@@ -7,9 +7,9 @@ export function convertNumberToEnglishText(n: number): string {
         throw ("number is out of bounds, please enter another number inside -99999 to 99999 limits.");
     }
 
-    const maxNumberOfDigits = 5;
-    let englishText = n >= 0 ? "" : "negative";
-    let processingNumber = Math.abs(n);
+    const maxNumberOfDigits: number  = 5;
+    let englishText: string = n >= 0 ? "" : "negative";
+    let processingNumber: number = Math.abs(n);
 
     const dictionary: { [id: number]: string } = {
         1000: 'thousand',
@@ -43,7 +43,7 @@ export function convertNumberToEnglishText(n: number): string {
         1: 'one'
     }
 
-    const keyNumbers = Object.keys(dictionary).map(number => Number(number)).reverse();
+    const keyNumbers: number[] = Object.keys(dictionary).map(number => Number(number)).reverse();
 
     keyNumbers.forEach(keyNumber => {
         if(processingNumber >= keyNumber) {
