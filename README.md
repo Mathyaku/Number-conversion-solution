@@ -4,11 +4,11 @@
 
 Write a program that would take a number and return its English representation. Example:
 
-- *Input*: `42`
-- *Output*: `'forty two'`
+- _Input_: `42`
+- _Output_: `'forty two'`
 
 For implementation use the `convertNumberToEnglishText(n: number): string` function located in `src/index.ts`.
- 
+
 ### Project setup
 
 You need to have `node` and `npm` installed on your machine.
