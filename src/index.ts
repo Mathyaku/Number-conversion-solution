@@ -51,7 +51,7 @@ export function convertNumberToEnglishText(n: number): string {
         }
         else if(processingNumber >= keyNumber) {
 
-            //split point to separate hundred and thousand
+            // split point to separate hundred and thousand
             if(keyNumber >= 100) {
 
                 const number: string = processingNumber.toString();
